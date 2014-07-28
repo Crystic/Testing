@@ -10,7 +10,7 @@ public class Items extends Item{
 	
 	public Items(){
 		
-		this.setCreativeTab(Testing.testingTab);
+		this.setCreativeTab(getCreativeTab().tabMaterials);
 		
 	}
 	

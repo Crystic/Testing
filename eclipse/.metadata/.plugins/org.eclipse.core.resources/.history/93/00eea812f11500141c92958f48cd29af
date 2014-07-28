@@ -46,9 +46,9 @@ public class Testing {
 		testingTab = new CreativeTabs("Testing"){
 			@SideOnly(Side.CLIENT)
 			public Item getTabIconItem(){
-				return Item.getItemFromBlock(Testing.blockTestBlock);
+				return Item.getItemFromBlock(Testing.itemTestBlock);
 			}
-		};
+		}
 	}
 	
 	@EventHandler

@@ -13,8 +13,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid= Testing.modid, version= Testing.version)
 
@@ -46,9 +44,9 @@ public class Testing {
 		testingTab = new CreativeTabs("Testing"){
 			@SideOnly(Side.CLIENT)
 			public Item getTabIconItem(){
-				return Item.getItemFromBlock(Testing.blockTestBlock);
+				return Item.getItemFromBlock(Testing.itemTestItem);
 			}
-		};
+		}
 	}
 	
 	@EventHandler

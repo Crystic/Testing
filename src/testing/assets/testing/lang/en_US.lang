@@ -1,2 +1,8 @@
+---Blocks---
 tile.TestBlock.name=Test Block
+
+---Items---
 item.TestItem.name=TestItem
+
+--Creative Tabs---
+itemGroup.Testing=Testing
