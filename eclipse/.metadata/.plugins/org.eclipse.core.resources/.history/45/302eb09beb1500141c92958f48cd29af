@@ -1,7 +1,6 @@
 package net.crystic.testing;
 
 //Imports
-import net.crystic.testing.items.Items;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -16,14 +15,13 @@ public class Testing {
 	public static final String modid = "Testing";
 	public static final String version = "A0.1";
 	
-	//Items
 	public static Item itemTestItem;
 	
 	@EventHandler	
 	public void PreInit(FMLPreInitializationEvent preEvent){
 	
 	//Items
-		itemTestItem = new Items().setUnlocalizedName("TestItem");
+		itemTestItem = new COItems().setUnlocalizedName("TestItem");
 		GameRegistry.registerItem(itemTestItem, "TestItem");
 
 	}

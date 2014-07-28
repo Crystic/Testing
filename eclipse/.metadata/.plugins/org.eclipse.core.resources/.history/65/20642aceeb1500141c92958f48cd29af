@@ -1,7 +1,7 @@
 package net.crystic.testing;
 
 //Imports
-import net.crystic.testing.items.Items;
+import net.crystic.testing.items.COItems;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -23,7 +23,7 @@ public class Testing {
 	public void PreInit(FMLPreInitializationEvent preEvent){
 	
 	//Items
-		itemTestItem = new Items().setUnlocalizedName("TestItem");
+		itemTestItem = new COItems().setUnlocalizedName("TestItem");
 		GameRegistry.registerItem(itemTestItem, "TestItem");
 
 	}
