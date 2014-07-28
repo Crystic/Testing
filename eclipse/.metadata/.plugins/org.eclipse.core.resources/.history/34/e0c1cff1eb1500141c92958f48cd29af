@@ -1,10 +1,7 @@
 package net.crystic.testing;
 
 //Imports
-import net.crystic.testing.blocks.TestBlock;
 import net.crystic.testing.items.Items;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -22,19 +19,12 @@ public class Testing {
 	//Items
 	public static Item itemTestItem;
 	
-	//Blocks
-	public static Block blockTestOre;
-	
 	@EventHandler	
 	public void PreInit(FMLPreInitializationEvent preEvent){
 	
 	//Items
 		itemTestItem = new Items().setUnlocalizedName("TestItem");
 		GameRegistry.registerItem(itemTestItem, "TestItem");
-		
-	//Blocks
-		blockTestOre = new TestBlock(Material.rock).setBlockName("TestOre");
-		GameRegistry.registerBlock(blockTestOre, "TestOre");
 
 	}
 	

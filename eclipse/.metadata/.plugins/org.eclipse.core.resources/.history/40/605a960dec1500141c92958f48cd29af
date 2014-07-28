@@ -1,7 +1,6 @@
 package net.crystic.testing;
 
 //Imports
-import net.crystic.testing.blocks.TestBlock;
 import net.crystic.testing.items.Items;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
