@@ -2,7 +2,7 @@ package net.crystic.testing;
 
 //Imports
 import net.crystic.testing.blocks.TestBlock;
-import net.crystic.testing.items.Items;
+import net.crystic.testing.items.TEItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -29,23 +29,23 @@ public class Testing {
 	public static Block blockTestBlock;
 	
 	//Creative Tab
-	public static CreativeTabs testingTab;
+	public static CreativeTabs testTab;
 	
 	@EventHandler	
 	public void PreInit(FMLPreInitializationEvent preEvent){
 	
 	//Items
-		itemTestItem = new Items().setUnlocalizedName("TestItem");
+		itemTestItem = new TEItems().setUnlocalizedName("TestItem");
 		GameRegistry.registerItem(itemTestItem, "TestItem");
 		
 	//Blocks
 		blockTestBlock = new TestBlock(Material.rock).setBlockName("TestBlock");
 		GameRegistry.registerBlock(blockTestBlock, "TestBlock");
 		
-	//Creative Tab
-		testingTab = new CreativeTabs("Testing"){
+		//Creative Tab
+		testTab = new CreativeTabs("Test") {
 			@SideOnly(Side.CLIENT)
-			public Item getTabIconItem(){
+			public Item getTabIconItem() {
 				return Item.getItemFromBlock(Testing.blockTestBlock);
 			}
 		};

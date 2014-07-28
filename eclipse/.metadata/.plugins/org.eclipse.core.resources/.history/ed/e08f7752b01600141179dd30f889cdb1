@@ -1,0 +1,11 @@
+package net.crystic.testing.tabs;
+
+import net.minecraft.creativetab.CreativeTabs;
+
+public class TETabs extends CreativeTabs{
+
+	public TETabs(String string) {
+		super(string);
+	}
+	
+}

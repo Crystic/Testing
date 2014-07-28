@@ -1,0 +1,18 @@
+package net.crystic.testing.tabs;
+
+import net.crystic.testing.Testing;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class TETabs extends CreativeTabs{
+
+	public TETabs(String string) {
+		super(string);
+	}
+
+	@Override
+	public Block getTabIconItem() {
+		return Testing.blockTestBlock;
+	}
+	
+}
