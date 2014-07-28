@@ -17,12 +17,10 @@ public class TestBlock extends Block{
 		this.setStepSound(soundTypeStone);
 		this.setCreativeTab(getCreativeTabToDisplayOn().tabBlock);
 	}
-	
-	@SideOnly(Side.CLIENT)
-	public void registerBlockIcon(IIconRegister iconRegister){
-		
-		this.blockIcon = iconRegister.registerIcon(Testing.modid + ":" + this.getUnlocalizedName().substring(5));
-		
-	}
 
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister iconRegister){
+		this.blockIcon = iconRegister.registerIcon(Testing.modid + ":" + this.getUnlocalizedName().substring(5));		
+	}
+	
 }

@@ -1,0 +1,9 @@
+package net.crystic.testing.blocks;
+
+import net.minecraft.block.Block;
+
+public class TestBlock extends Block{
+
+	
+	
+}

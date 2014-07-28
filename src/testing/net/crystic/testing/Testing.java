@@ -23,7 +23,7 @@ public class Testing {
 	public static Item itemTestItem;
 	
 	//Blocks
-	public static Block blockTestOre;
+	public static Block blockTestBlock;
 	
 	@EventHandler	
 	public void PreInit(FMLPreInitializationEvent preEvent){
@@ -33,9 +33,8 @@ public class Testing {
 		GameRegistry.registerItem(itemTestItem, "TestItem");
 		
 	//Blocks
-		blockTestOre = new TestBlock(Material.rock).setBlockName("TestOre");
-		GameRegistry.registerBlock(blockTestOre, "TestOre");
-
+		blockTestBlock = new TestBlock(Material.rock).setBlockName("TestBlock");
+		GameRegistry.registerBlock(blockTestBlock, "TestBlock");
 	}
 	
 	@EventHandler
