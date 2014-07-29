@@ -3,14 +3,20 @@ package net.crystic.cryscraft;
 //Imports
 import net.crystic.cryscraft.blocks.MetalBlock;
 import net.crystic.cryscraft.blocks.OreBlock;
+import net.crystic.cryscraft.handler.CraftingHandler;
 import net.crystic.cryscraft.handler.FuelHandler;
 import net.crystic.cryscraft.items.CCItems;
+import net.crystic.cryscraft.items.IronHammer;
+import net.crystic.cryscraft.items.IronPunch;
 import net.crystic.cryscraft.worldgen.CrysCraftWorldGen;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -32,14 +38,21 @@ public class CrysCraft {
 	//World Gen
 		CrysCraftWorldGen eventWorldGen = new CrysCraftWorldGen();
 	
-	//Items
+//Items
 		public static Item itemCopperIngot;
 		public static Item itemTinIngot;
 		public static Item itemZincIngot;
+
 	//Fuels
 		public static Item itemTreePitch;
 	
-	//Blocks
+	//Durable Items
+		public static Item itemIronDisk;
+		public static Item itemIronWasher;
+		public static Item itemIronHammer;
+		public static Item itemIronPunch;
+		
+//Blocks
 	//Normal Blocks
 		public static Block blockCopperBlock;
 		public static Block blockTinBlock;
@@ -62,7 +75,7 @@ public class CrysCraft {
 		}
 	};
 		
-	//Items
+//Items
 		itemCopperIngot = new CCItems().setUnlocalizedName("CopperIngot");
 		GameRegistry.registerItem(itemCopperIngot, "CopperIngot");
 		
@@ -71,11 +84,24 @@ public class CrysCraft {
 		
 		itemZincIngot = new CCItems().setUnlocalizedName("ZincIngot");
 		GameRegistry.registerItem(itemZincIngot, "ZincIngot");
-		
+	//Fuels
 		itemTreePitch = new CCItems().setUnlocalizedName("TreePitch");
 		GameRegistry.registerItem(itemTreePitch, "TreePitch");
+
+	//Durable Items
+		itemIronDisk = new CCItems().setUnlocalizedName("IronDisk");
+		GameRegistry.registerItem(itemIronDisk, "IronDisk");
 		
-	//Blocks
+		itemIronWasher = new CCItems().setUnlocalizedName("IronWasher");
+		GameRegistry.registerItem(itemIronWasher, "IronWasher");
+		
+		itemIronHammer = new IronHammer().setUnlocalizedName("IronHammer");
+		GameRegistry.registerItem(itemIronHammer, "IronHammer");
+		
+		itemIronPunch = new IronPunch().setUnlocalizedName("IronPunch");
+		GameRegistry.registerItem(itemIronPunch, "IronPunch");
+		
+//Blocks
 	//Normal Blocks
 		blockCopperBlock = new MetalBlock(Material.iron).setBlockName("CopperBlock");
 		GameRegistry.registerBlock(blockCopperBlock, "CopperBlock");
@@ -96,31 +122,38 @@ public class CrysCraft {
 		oreZincOre = new OreBlock(Material.rock).setBlockName("ZincOre");
 		GameRegistry.registerBlock(oreZincOre, "ZincOre");
 		
-	//Spawn
+//World Gen
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
 			
 	}
 	
 	@EventHandler
 	public void Init(FMLInitializationEvent event){
+//Crafting Handler
+		FMLCommonHandler.instance().bus().register(new CraftingHandler());
 		
-	//Smelting Recipe
+//Smelting Recipe
 		//Output multiple: new ItemStack (itemExampleItem, X) X= Number of output.
 		GameRegistry.addSmelting(oreCopperOre, new ItemStack (itemCopperIngot), 0);
 		GameRegistry.addSmelting(oreTinOre, new ItemStack(itemTinIngot), 0);
 		GameRegistry.addSmelting(oreZincOre, new ItemStack(itemZincIngot), 0);
 		
-	//Crafting Recipes
+//Crafting Recipes
 	//Shaped
 		//Output multiple: new ItemStack (itemExampleItem, X) X= Number of output.
 		GameRegistry.addShapedRecipe(new ItemStack(blockCopperBlock), new Object[]{ "XXX", "XXX", "XXX", 'X', itemCopperIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(blockTinBlock), new Object[]{ "XXX", "XXX", "XXX", 'X', itemTinIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(blockZincBlock), new Object[]{ "XXX", "XXX", "XXX", 'X', itemZincIngot});
+	
+	//Durable Items
+		GameRegistry.addShapedRecipe(new ItemStack(itemIronDisk, 4), new Object[] {"IH", 'I', Items.iron_ingot, 'H', new ItemStack (itemIronHammer, 1, OreDictionary.WILDCARD_VALUE)});
+		GameRegistry.addShapedRecipe(new ItemStack(itemIronWasher), new Object[] {"DP", 'D', itemIronDisk, 'P', new ItemStack (itemIronPunch, 1, OreDictionary.WILDCARD_VALUE)});
+	
 	//Shapeless
 		//Multiple inputs: {input1, input2, input3}
 		GameRegistry.addShapelessRecipe(new ItemStack(itemCopperIngot), new Object[]{blockCopperBlock});
-	
-	//Fuel Handler
+			
+//Fuel Handler
 		GameRegistry.registerFuelHandler(new FuelHandler());
 	}
 	

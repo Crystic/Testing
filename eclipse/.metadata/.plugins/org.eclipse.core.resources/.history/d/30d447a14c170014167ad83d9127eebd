@@ -1,0 +1,10 @@
+package net.crystic.cryscraft.handler;
+
+import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
+
+public class CraftingHandler {
+	
+	public void onCrafting(ItemCraftedEvent event) {
+		
+	}
+}

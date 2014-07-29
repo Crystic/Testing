@@ -1,0 +1,9 @@
+package net.crystic.cryscraft.handler;
+
+public class CraftingHandler {
+
+	@SupressWarnings("null")
+	@SubscribeEvent
+	
+	
+}

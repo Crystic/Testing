@@ -1,0 +1,15 @@
+package net.crystic.cryscraft.items;
+
+import net.crystic.cryscraft.CrysCraft;
+import net.minecraft.item.Item;
+
+public class IronHammer extends Item {
+
+	public IronHammer() {
+		super();
+		this.maxStackSize = 1;
+		this.setMaxDamage(64);
+		this.setNoRepair();
+		this.setCreativeTab(CrysCraft.crysCraftTab);
+	}
+}

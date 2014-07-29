@@ -14,5 +14,10 @@ item.ZincIngot.name=ZincIngot
 
 item.TreePitch.name=TreePitch
 
+item.IronDisk.name=IronDisk
+item.IronWasher.name=IronWasher
+item.IronHammer.name=IronHammer
+item.IronPunch.name=IronPunch
+
 --Creative Tabs---
 itemGroup.CrysCraft=CrysCraft
