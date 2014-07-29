@@ -1,0 +1,6 @@
+package net.crystic.cryscraft.worldgen;
+
+public class CrysCraftWorldGen implements IWorldGenerator {
+
+
+}	

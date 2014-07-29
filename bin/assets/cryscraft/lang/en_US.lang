@@ -1,9 +1,16 @@
 ---Blocks---
 tile.CopperOre.name=Copper Ore
+tile.TinOre.name=Tin Ore
+tile.ZincOre.name=Zinc Ore
+
 tile.CopperBlock.name=Copper Block
+tile.TinBlock.name=Tin Block
+tile.ZincBlock.name=Zinc Block
 
 ---Items---
 item.CopperIngot.name=CopperIngot
+item.TinIngot.name=TinIngot
+item.ZincIngot.name=ZincIngot
 
 --Creative Tabs---
 itemGroup.CrysCraft=CrysCraft

@@ -8,4 +8,6 @@
 <fullyQualifiedTypeName name="net.crystic.testing.tabs.TETabs"/>
 <fullyQualifiedTypeName name="net.crystic.testing.Testing"/>
 <fullyQualifiedTypeName name="net.crystic.testing.blocks.TestBlock"/>
+<fullyQualifiedTypeName name="net.minecraft.world.chunk.IChunkProvider"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.IWorldGenerator"/>
 </qualifiedTypeNameHistroy>

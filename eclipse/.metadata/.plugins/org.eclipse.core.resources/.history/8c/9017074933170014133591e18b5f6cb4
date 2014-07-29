@@ -1,0 +1,92 @@
+package net.crystic.cryscraft;
+
+//Imports
+import net.crystic.cryscraft.blocks.OreBlock;
+import net.crystic.cryscraft.items.CCItems;
+import net.crystic.cryscraft.worldgen.CrysCraftWorldGen;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+@Mod(modid= CrysCraft.modid, version= CrysCraft.version)
+
+public class CrysCraft {
+	public static final String modid = "CrysCraft";
+	public static final String version = "A0.1";
+
+	//Creative Tab !!!Must be first!!!
+	public static CreativeTabs crysCraftTab;
+
+	//World Gen
+	CrysCraftWorldGen eventWorldGen = new CrysCraftWorldGen();
+	
+	//Items
+	public static Item itemCopperIngot;
+	
+	//Blocks
+		//Normal Blocks
+	public static Block blockCopperBlock;
+	
+		//Ores
+	public static Block oreCopperOre;
+	public static Block oreTinOre;
+	public static Block oreZincOre;
+	
+	
+	@EventHandler	
+	public void PreInit(FMLPreInitializationEvent preEvent){
+
+	//Creative Tab !!!Must be registered first!!!
+		crysCraftTab = new CreativeTabs("CrysCraft") {
+		@SideOnly(Side.CLIENT)
+		public Item getTabIconItem() {
+			return Item.getItemFromBlock(CrysCraft.oreCopperOre);
+		}
+	};
+		
+	//Items
+		itemCopperIngot = new CCItems().setUnlocalizedName("CopperIngot");
+		GameRegistry.registerItem(itemCopperIngot, "CopperIngot");
+		
+	//Blocks
+		//Normal Blocks
+		blockCopperBlock = new OreBlock(Material.rock).setBlockName("CopperBlock");
+		GameRegistry.registerBlock(blockCopperBlock, "CopperBlock");
+		
+		//Ores
+		oreCopperOre = new OreBlock(Material.rock).setBlockName("CopperOre");
+		GameRegistry.registerBlock(oreCopperOre, "CopperOre");
+		
+		oreTinOre = new OreBlock(Material.rock).setBlockName("TinOre");
+		GameRegistry.registerBlock(oreTinOre, "TinOre");
+		
+		oreZincOre = new OreBlock(Material.rock).setBlockName("ZincOre");
+		GameRegistry.registerBlock(oreZincOre, "ZincOre");
+	}
+	
+	@EventHandler
+	public void Init(FMLInitializationEvent event){
+		
+	//Smelting Recipe
+		//Output multiple: new ItemStack (itemTestItem, X) X= Number of output.
+		GameRegistry.addSmelting(oreCopperOre, new ItemStack (itemCopperIngot), 0);
+		
+	//Crafting Recipes
+		GameRegistry.addShapedRecipe(new ItemStack(oreCopperOre), new Object[]{ "XXX", "XXX", "XXX", 'X', itemCopperIngot});
+	}
+	
+	@EventHandler
+	public void PostInit(FMLPostInitializationEvent postEvent){
+		
+	}
+}

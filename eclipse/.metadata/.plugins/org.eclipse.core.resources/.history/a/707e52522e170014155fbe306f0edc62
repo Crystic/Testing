@@ -1,0 +1,8 @@
+package net.crystic.cryscraft.worldgen;
+
+import cpw.mods.fml.common.IWorldGenerator;
+
+public class CrysCraftWorldGen implements IWorldGenerator {
+
+
+}	
