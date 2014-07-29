@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -34,14 +35,13 @@ public class Testing {
 	@EventHandler	
 	public void PreInit(FMLPreInitializationEvent preEvent){
 
-	//Creative Tab
+	//Creative Tab !!!Must be registered first!!!
 		testTab = new CreativeTabs("Test") {
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem() {
 			return Item.getItemFromBlock(Testing.blockTestBlock);
 		}
 	};
-
 		
 	//Items
 		itemTestItem = new TEItems().setUnlocalizedName("TestItem");
@@ -50,12 +50,17 @@ public class Testing {
 	//Blocks
 		blockTestBlock = new TestBlock(Material.rock).setBlockName("TestBlock");
 		GameRegistry.registerBlock(blockTestBlock, "TestBlock");
-		
 	}
 	
 	@EventHandler
 	public void Init(FMLInitializationEvent event){
 		
+	//Smelting Recipe
+		//Output multiple: new ItemStack (itemTestItem, X) X= Number of output.
+		GameRegistry.addSmelting(blockTestBlock, new ItemStack (itemTestItem), 0);
+		
+	//Crafting Recipes
+		GameRegistry.addShapedRecipe(new ItemStack(blockTestBlock), new Object[]{ "XXX", "XXX", "XXX", 'X', itemTestItem});
 	}
 	
 	@EventHandler

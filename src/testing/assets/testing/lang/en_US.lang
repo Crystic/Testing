@@ -5,4 +5,4 @@ tile.TestBlock.name=Test Block
 item.TestItem.name=TestItem
 
 --Creative Tabs---
-itemGroup.Testing=Testing
+itemGroup.Test=Testing
