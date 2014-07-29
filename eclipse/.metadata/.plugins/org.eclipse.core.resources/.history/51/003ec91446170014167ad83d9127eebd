@@ -1,0 +1,5 @@
+package net.crystic.cryscraft.handler;
+
+public class FuelHandler {
+
+}

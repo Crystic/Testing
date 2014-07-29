@@ -12,5 +12,7 @@ item.CopperIngot.name=CopperIngot
 item.TinIngot.name=TinIngot
 item.ZincIngot.name=ZincIngot
 
+item.TreePitch.name=TreePitch
+
 --Creative Tabs---
 itemGroup.CrysCraft=CrysCraft

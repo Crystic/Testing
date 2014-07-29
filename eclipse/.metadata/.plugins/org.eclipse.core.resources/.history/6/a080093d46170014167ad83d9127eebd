@@ -1,0 +1,8 @@
+package net.crystic.cryscraft.handler;
+
+import cpw.mods.fml.common.IFuelHandler;
+
+public class FuelHandler implements IFuelHandler {
+
+		if(fuel.getItem() == CrysCraft.itemTreePitch) return 800;
+}

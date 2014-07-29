@@ -3,6 +3,7 @@ package net.crystic.cryscraft;
 //Imports
 import net.crystic.cryscraft.blocks.MetalBlock;
 import net.crystic.cryscraft.blocks.OreBlock;
+import net.crystic.cryscraft.handler.FuelHandler;
 import net.crystic.cryscraft.items.CCItems;
 import net.crystic.cryscraft.worldgen.CrysCraftWorldGen;
 import net.minecraft.block.Block;
@@ -22,31 +23,33 @@ import cpw.mods.fml.relauncher.SideOnly;
 @Mod(modid= CrysCraft.modid, version= CrysCraft.version)
 
 public class CrysCraft {
-	public static final String modid = "CrysCraft";
-	public static final String version = "A0.1";
+		public static final String modid = "CrysCraft";
+		public static final String version = "A0.1";
 
 	//Creative Tab !!!Must be first!!!
-	public static CreativeTabs crysCraftTab;
+		public static CreativeTabs crysCraftTab;
 
 	//World Gen
-	CrysCraftWorldGen eventWorldGen = new CrysCraftWorldGen();
+		CrysCraftWorldGen eventWorldGen = new CrysCraftWorldGen();
 	
 	//Items
-	public static Item itemCopperIngot;
-	public static Item itemTinIngot;
-	public static Item itemZincIngot;
+		public static Item itemCopperIngot;
+		public static Item itemTinIngot;
+		public static Item itemZincIngot;
+	//Fuels
+		public static Item itemTreePitch;
 	
 	//Blocks
-		//Normal Blocks
-	public static Block blockCopperBlock;
-	public static Block blockTinBlock;
-	public static Block blockZincBlock;
+	//Normal Blocks
+		public static Block blockCopperBlock;
+		public static Block blockTinBlock;
+		public static Block blockZincBlock;
 	
-		//Ores
-	public static Block oreCopperOre;
-	public static Block oreTinOre;
-	public static Block oreZincOre;
-	
+	//Ores
+		public static Block oreCopperOre;
+		public static Block oreTinOre;
+		public static Block oreZincOre;
+		
 	
 	@EventHandler	
 	public void PreInit(FMLPreInitializationEvent preEvent){
@@ -68,6 +71,9 @@ public class CrysCraft {
 		
 		itemZincIngot = new CCItems().setUnlocalizedName("ZincIngot");
 		GameRegistry.registerItem(itemZincIngot, "ZincIngot");
+		
+		itemTreePitch = new CCItems().setUnlocalizedName("TreePitch");
+		GameRegistry.registerItem(itemTreePitch, "TreePitch");
 		
 	//Blocks
 	//Normal Blocks
@@ -92,21 +98,30 @@ public class CrysCraft {
 		
 	//Spawn
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);
+			
 	}
 	
 	@EventHandler
 	public void Init(FMLInitializationEvent event){
 		
 	//Smelting Recipe
-		//Output multiple: new ItemStack (itemTestItem, X) X= Number of output.
+		//Output multiple: new ItemStack (itemExampleItem, X) X= Number of output.
 		GameRegistry.addSmelting(oreCopperOre, new ItemStack (itemCopperIngot), 0);
 		GameRegistry.addSmelting(oreTinOre, new ItemStack(itemTinIngot), 0);
 		GameRegistry.addSmelting(oreZincOre, new ItemStack(itemZincIngot), 0);
 		
 	//Crafting Recipes
+	//Shaped
+		//Output multiple: new ItemStack (itemExampleItem, X) X= Number of output.
 		GameRegistry.addShapedRecipe(new ItemStack(blockCopperBlock), new Object[]{ "XXX", "XXX", "XXX", 'X', itemCopperIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(blockTinBlock), new Object[]{ "XXX", "XXX", "XXX", 'X', itemTinIngot});
 		GameRegistry.addShapedRecipe(new ItemStack(blockZincBlock), new Object[]{ "XXX", "XXX", "XXX", 'X', itemZincIngot});
+	//Shapeless
+		//Multiple inputs: {input1, input2, input3}
+		GameRegistry.addShapelessRecipe(new ItemStack(itemCopperIngot), new Object[]{blockCopperBlock});
+	
+	//Fuel Handler
+		GameRegistry.registerFuelHandler(new FuelHandler());
 	}
 	
 	@EventHandler
