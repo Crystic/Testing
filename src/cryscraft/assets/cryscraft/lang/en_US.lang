@@ -1,0 +1,9 @@
+---Blocks---
+tile.CopperOre.name=Copper Ore
+tile.CopperBlock.name=Copper Block
+
+---Items---
+item.CopperIngot.name=CopperIngot
+
+--Creative Tabs---
+itemGroup.CrysCraft=CrysCraft

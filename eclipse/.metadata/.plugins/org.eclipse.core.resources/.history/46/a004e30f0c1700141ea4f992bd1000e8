@@ -1,0 +1,5 @@
+package net.crystic.testing.blocks;
+
+public class OreBlock {
+
+}

@@ -7,4 +7,5 @@
 <fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="net.crystic.testing.tabs.TETabs"/>
 <fullyQualifiedTypeName name="net.crystic.testing.Testing"/>
+<fullyQualifiedTypeName name="net.crystic.testing.blocks.TestBlock"/>
 </qualifiedTypeNameHistroy>

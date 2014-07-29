@@ -6,3 +6,15 @@
 1406507621677	Delete element
 1406589885405	Rename type 'Items'
 1406590777610	Delete element
+1406630210972	Delete element
+1406630273044	Rename field 'itemTestItem'
+1406630291712	Rename field 'blockTestBlock'
+1406630304034	Rename field 'copperIngot'
+1406630327103	Rename field 'testTab'
+1406630362497	Rename source folder 'src/testing'
+1406630388580	Rename package 'net.crystic.testing.blocks'
+1406630397640	Rename package 'net.crystic.testing.items'
+1406630407029	Rename package 'net.crystic.testing'
+1406630581465	Rename type 'TEItems'
+1406630595509	Rename type 'TestBlock'
+1406630984224	Rename package 'assets.testing.lang'

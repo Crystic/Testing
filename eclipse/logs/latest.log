@@ -1,28 +1,26 @@
-[01:20:14] [main/INFO]: Setting user: ForgeDevName
-[01:20:15] [Client thread/INFO]: LWJGL Version: 2.9.1
-[01:20:18] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Testing
-[01:20:18] [Sound Library Loader/INFO]: Sound engine started
-[01:20:19] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[01:20:19] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[01:20:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Testing
-[01:20:19] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[01:20:20] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[01:20:21] [Sound Library Loader/INFO]: Sound engine started
-[01:20:23] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[01:20:23] [Server thread/INFO]: Generating keypair
-[01:20:23] [Server thread/INFO]: Preparing start region for level 0
-[01:20:24] [Server thread/INFO]: Changing view distance to 12, from 10
-[01:20:24] [Server thread/INFO]: ForgeDevName[local:E:179ab3cc] logged in with entity id 845 at (210.34628184100094, 67.0, 220.41003512276853)
-[01:20:24] [Server thread/INFO]: ForgeDevName joined the game
-[01:20:34] [Client thread/INFO]: Warning: Clientside chunk ticking took 358 ms
-[01:20:34] [Client thread/INFO]: Stopping!
-[01:20:34] [Server thread/INFO]: Stopping server
-[01:20:34] [Server thread/INFO]: Saving players
-[01:20:34] [Server thread/INFO]: Saving worlds
-[01:20:34] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[01:20:34] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[01:20:34] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[01:20:35] [Client Shutdown Thread/INFO]: Stopping server
-[01:20:35] [Client Shutdown Thread/INFO]: Saving players
-[01:20:35] [Client Shutdown Thread/INFO]: Saving worlds
-[01:20:35] [Client Shutdown Thread/INFO]: Saving chunks for level 'New World'/Overworld
+[12:02:26] [main/INFO]: Setting user: ForgeDevName
+[12:02:27] [Client thread/INFO]: LWJGL Version: 2.9.1
+[12:02:30] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:CrysCraft
+[12:02:31] [Sound Library Loader/INFO]: Sound engine started
+[12:02:32] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[12:02:32] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[12:02:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:CrysCraft
+[12:02:32] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[12:02:32] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[12:02:33] [Sound Library Loader/INFO]: Sound engine started
+[12:02:40] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[12:02:40] [Server thread/INFO]: Generating keypair
+[12:02:40] [Server thread/INFO]: Preparing start region for level 0
+[12:02:41] [Server thread/INFO]: Changing view distance to 12, from 10
+[12:02:41] [Server thread/INFO]: ForgeDevName[local:E:0b561075] logged in with entity id 844 at (210.34628184100094, 67.0, 220.41003512276853)
+[12:02:41] [Server thread/INFO]: ForgeDevName joined the game
+[12:02:50] [Client thread/INFO]: Warning: Clientside chunk ticking took 185 ms
+[12:02:51] [Client thread/INFO]: Stopping!
+[12:02:51] [Server thread/INFO]: Stopping server
+[12:02:51] [Server thread/INFO]: Saving players
+[12:02:51] [Server thread/INFO]: Saving worlds
+[12:02:51] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[12:02:51] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[12:02:51] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[12:02:51] [Client Shutdown Thread/INFO]: Stopping server
+[12:02:51] [Client Shutdown Thread/INFO]: Saving players
