@@ -3,12 +3,17 @@
 <fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.texture.IIconRegister"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
-<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="net.crystic.testing.tabs.TETabs"/>
 <fullyQualifiedTypeName name="net.crystic.testing.Testing"/>
 <fullyQualifiedTypeName name="net.crystic.testing.blocks.TestBlock"/>
 <fullyQualifiedTypeName name="net.minecraft.world.chunk.IChunkProvider"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.IWorldGenerator"/>
-<fullyQualifiedTypeName name="net.crystic.cryscraft.CrysCraft"/>
 <fullyQualifiedTypeName name="net.minecraft.block.Block"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
+<fullyQualifiedTypeName name="net.crystic.cryscraft.CrysCraft"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.FMLCommonHandler"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+<fullyQualifiedTypeName name="net.minecraftforge.oredict.OreDictionary"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.eventhandler.SubscribeEvent"/>
 </qualifiedTypeNameHistroy>
