@@ -1,0 +1,13 @@
+package net.crystic.cryscraft.items;
+
+import net.crystic.cryscraft.CrysCraft;
+import net.minecraft.item.ItemSword;
+
+public class CopperSword extends ItemSword {
+
+	public CopperSword(ToolMaterial p_i45356_1_) {
+		super(p_i45356_1_);
+		this.setCreativeTab(CrysCraft.crysCraftTab);
+	}
+
+}

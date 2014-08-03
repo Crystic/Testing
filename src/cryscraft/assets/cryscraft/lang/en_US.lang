@@ -2,6 +2,7 @@
 tile.CopperOre.name=Copper Ore
 tile.TinOre.name=Tin Ore
 tile.ZincOre.name=Zinc Ore
+tile.RedEmeraldOre.name=Red Emerald Ore
 
 tile.CopperBlock.name=Copper Block
 tile.TinBlock.name=Tin Block
@@ -18,6 +19,14 @@ item.IronDisk.name=IronDisk
 item.IronWasher.name=IronWasher
 item.IronHammer.name=IronHammer
 item.IronPunch.name=IronPunch
+
+item.CopperSword.name=Copper Sword
+item.CopperAxe.name=Copper Axe
+item.CopperShovel.name=Copper Shovel
+item.CopperHoe.name=Copper Hoe
+item.CopperPickaxe.name=Copper Pickaxe
+
+item.RedEmerald.name=RedEmerald
 
 --Creative Tabs---
 itemGroup.CrysCraft=CrysCraft

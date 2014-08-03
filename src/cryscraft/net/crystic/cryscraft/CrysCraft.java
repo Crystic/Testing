@@ -6,6 +6,11 @@ import net.crystic.cryscraft.blocks.OreBlock;
 import net.crystic.cryscraft.handler.CraftingHandler;
 import net.crystic.cryscraft.handler.FuelHandler;
 import net.crystic.cryscraft.items.CCItems;
+import net.crystic.cryscraft.items.CopperAxe;
+import net.crystic.cryscraft.items.CopperHoe;
+import net.crystic.cryscraft.items.CopperPickaxe;
+import net.crystic.cryscraft.items.CopperShovel;
+import net.crystic.cryscraft.items.CopperSword;
 import net.crystic.cryscraft.items.IronHammer;
 import net.crystic.cryscraft.items.IronPunch;
 import net.crystic.cryscraft.worldgen.CrysCraftWorldGen;
@@ -14,7 +19,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -34,6 +41,9 @@ public class CrysCraft {
 
 	//Creative Tab !!!Must be first!!!
 		public static CreativeTabs crysCraftTab;
+		
+	//Tools
+		public static ToolMaterial CopperMaterial = EnumHelper.addToolMaterial("CopperMaterial", 2, 750, 10.0F, 5.0F, 10);
 
 	//World Gen
 		CrysCraftWorldGen eventWorldGen = new CrysCraftWorldGen();
@@ -42,6 +52,7 @@ public class CrysCraft {
 		public static Item itemCopperIngot;
 		public static Item itemTinIngot;
 		public static Item itemZincIngot;
+		public static Item itemRedEmerald;
 
 	//Fuels
 		public static Item itemTreePitch;
@@ -51,6 +62,13 @@ public class CrysCraft {
 		public static Item itemIronWasher;
 		public static Item itemIronHammer;
 		public static Item itemIronPunch;
+		
+	//Tools
+		public static Item itemCopperSword;
+		public static Item itemCopperAxe;
+		public static Item itemCopperShovel;
+		public static Item itemCopperHoe;
+		public static Item itemCopperPickaxe;
 		
 //Blocks
 	//Normal Blocks
@@ -62,6 +80,7 @@ public class CrysCraft {
 		public static Block oreCopperOre;
 		public static Block oreTinOre;
 		public static Block oreZincOre;
+		public static Block oreRedEmerald;
 		
 	
 	@EventHandler	
@@ -84,6 +103,10 @@ public class CrysCraft {
 		
 		itemZincIngot = new CCItems().setUnlocalizedName("ZincIngot");
 		GameRegistry.registerItem(itemZincIngot, "ZincIngot");
+		
+		itemRedEmerald = new CCItems().setUnlocalizedName("RedEmerald");
+		GameRegistry.registerItem(itemRedEmerald, "RedEmerald");
+		
 	//Fuels
 		itemTreePitch = new CCItems().setUnlocalizedName("TreePitch");
 		GameRegistry.registerItem(itemTreePitch, "TreePitch");
@@ -100,6 +123,22 @@ public class CrysCraft {
 		
 		itemIronPunch = new IronPunch().setUnlocalizedName("IronPunch");
 		GameRegistry.registerItem(itemIronPunch, "IronPunch");
+	
+	//Tools
+		itemCopperSword = new CopperSword(CopperMaterial).setUnlocalizedName("CopperSword");
+		GameRegistry.registerItem(itemCopperSword, "CopperSword");
+		
+		itemCopperAxe = new CopperAxe(CopperMaterial).setUnlocalizedName("CopperAxe");
+		GameRegistry.registerItem(itemCopperAxe, "CopperAxe");
+		
+		itemCopperShovel = new CopperShovel(CopperMaterial).setUnlocalizedName("CopperShovel");
+		GameRegistry.registerItem(itemCopperShovel, "CopperShovel");
+		
+		itemCopperHoe = new CopperHoe(CopperMaterial).setUnlocalizedName("CopperHoe");
+		GameRegistry.registerItem(itemCopperHoe, "CopperHoe");
+		
+		itemCopperPickaxe = new CopperPickaxe(CopperMaterial).setUnlocalizedName("CopperPickaxe");
+		GameRegistry.registerItem(itemCopperPickaxe, "CopperPickaxe");
 		
 //Blocks
 	//Normal Blocks
@@ -121,6 +160,9 @@ public class CrysCraft {
 		
 		oreZincOre = new OreBlock(Material.rock).setBlockName("ZincOre");
 		GameRegistry.registerBlock(oreZincOre, "ZincOre");
+		
+		oreRedEmerald = new OreBlock(Material.rock).setBlockName("RedEmeraldOre");
+		GameRegistry.registerBlock(oreRedEmerald, "RedEmeraldOre");
 		
 //World Gen
 		GameRegistry.registerWorldGenerator(eventWorldGen, 0);

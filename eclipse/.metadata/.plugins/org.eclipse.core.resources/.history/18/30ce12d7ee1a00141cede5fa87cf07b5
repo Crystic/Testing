@@ -1,0 +1,23 @@
+---Blocks---
+tile.CopperOre.name=Copper Ore
+tile.TinOre.name=Tin Ore
+tile.ZincOre.name=Zinc Ore
+
+tile.CopperBlock.name=Copper Block
+tile.TinBlock.name=Tin Block
+tile.ZincBlock.name=Zinc Block
+
+---Items---
+item.CopperIngot.name=CopperIngot
+item.TinIngot.name=TinIngot
+item.ZincIngot.name=ZincIngot
+
+item.TreePitch.name=TreePitch
+
+item.IronDisk.name=IronDisk
+item.IronWasher.name=IronWasher
+item.IronHammer.name=IronHammer
+item.IronPunch.name=IronPunch
+
+--Creative Tabs---
+itemGroup.CrysCraft=CrysCraft

@@ -42,6 +42,7 @@ public class CrysCraftWorldGen implements IWorldGenerator {
 		this.addOreSpawn(CrysCraft.oreCopperOre, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
 		this.addOreSpawn(CrysCraft.oreTinOre, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
 		this.addOreSpawn(CrysCraft.oreZincOre, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
+		this.addOreSpawn(CrysCraft.oreRedEmerald, world, random, x, z, 16, 16, 4+random.nextInt(6), 25, 38, 100);
 		
 	}
 

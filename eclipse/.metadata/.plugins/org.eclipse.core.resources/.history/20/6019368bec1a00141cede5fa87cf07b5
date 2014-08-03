@@ -1,0 +1,5 @@
+package net.crystic.cryscraft;
+
+public class CopperShovel extends ItemShovel {
+
+}
